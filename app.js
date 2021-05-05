@@ -57,7 +57,7 @@
         })
 // Rotas
         app.get('/', (req, res) => {
-            Postagem.find().populate('categoria').sort({data:"desc"}).then((postagens) => {
+            Postagem.find().lean().populate('categoria').sort({data:"desc"}).then((postagens) => {
                 Postagem.findOne()
                     res.render("index", {postagens: postagens})
             }).catch((err) => {
