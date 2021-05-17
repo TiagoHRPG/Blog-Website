@@ -11,9 +11,6 @@ router.get('/', eAdmin, (req, res) => {
     res.render("admin/index")
 })
 
-router.get('/posts', eAdmin, (req,res) => {
-    res.send("pagina de posts")
-})
 
 //listando categorias
 router.get('/categorias', eAdmin, (req,res) => {
